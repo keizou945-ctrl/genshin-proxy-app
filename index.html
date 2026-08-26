@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Private Server Installer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 350px;
+            width: 90%;
+        }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #38bdf8; }
+        p { font-size: 14px; color: #94a3b8; margin-bottom: 30px; line-height: 1.5; }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #38bdf8, #0369a1);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+            transition: transform 0.2s;
+        }
+        .btn:active { transform: scale(0.95); }
+        .note { font-size: 11px; color: #64748b; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>自作プサバツール</h1>
+    <p>iPhone単体でプロキシ設定を切り替える接続用アプリ（IPA）を直接インストールします。</p>
+    
+    <!-- ★インストールを起動させるApple特殊リンク。URL=の後にmanifest.plistのRaw直リンクを入れます -->
+    <a href="itms-services://?action=download-manifest&url=https://githubusercontent.com" class="btn">
+        アプリをダウンロード
+    </a>
+
+    <div class="note">※必ずiPhoneのSafariブラウザで開いてタップしてください。</div>
+</div>
+
+</body>
+</html>
