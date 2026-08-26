@@ -10,9 +10,10 @@ workflows:
       - name: Set up local properties
         script: |
           flutter packages pub get
-      - name: Build iOS App without codesign
+      - name: Build Genuine iOS App
         script: |
-          # 署名エラーを完全に回避してシミュレータ用（未署名）としてビルドします
-          flutter build ios --simulator --debug
+          # ★ここをシミュレータ用から「本物の実機用（未署名）」に修正しました
+          flutter build ios --no-codesign --debug
     artifacts:
-      - build/ios/iphonesimulator/*.app
+      # ★出力される本物のアプリフォルダを回収します
+      - build/ios/iphoneos/*.app
