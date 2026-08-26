@@ -1,0 +1,18 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Set up local properties
+        script: |
+          flutter packages pub get
+      - name: Build iOS App without codesign
+        script: |
+          # 署名エラーを完全に回避してシミュレータ用（未署名）としてビルドします
+          flutter build ios --simulator --debug
+    artifacts:
+      - build/ios/iphonesimulator/*.app
