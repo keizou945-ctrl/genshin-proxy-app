@@ -10,8 +10,9 @@
                 <dict>
                     <key>kind</key>
                     <string>software-package</string>
+                    <!-- ★修正部分：Releasesから本番用のIPAファイルを裏側で安全に引っ張ってくる直リンクURLです -->
                     <key>url</key>
-                    <string>https://githubusercontent.com</string>
+                    <string>https://github.com</string>
                 </dict>
             </array>
             <key>metadata</key>
