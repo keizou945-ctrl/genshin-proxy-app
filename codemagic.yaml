@@ -12,8 +12,6 @@ workflows:
           flutter packages pub get
       - name: Build Genuine iOS App
         script: |
-          # ★ここをシミュレータ用から「本物の実機用（未署名）」に修正しました
-          flutter build ios --no-codesign --debug
+          flutter build ios --no-codesign --release
     artifacts:
-      # ★出力される本物のアプリフォルダを回収します
       - build/ios/iphoneos/*.app
